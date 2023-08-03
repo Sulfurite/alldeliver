@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300&display=swap');
+
+
+
 * {
+    font-family: 'Inter';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+#main {
+    z-index: -999!important
+}
+body {
+    background-color: #F9FAFC;
+}
+/* header {
+    position: fixed;
+} */
 .header__bottom {
     z-index: -1;
 }
@@ -20,16 +34,18 @@
 
 .header__upper {
     background-color: #fff;
-    position: fixed;
     align-items: center;
     display: flex;
+    position: fixed;
     width: 100vw;
     height: 56px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    z-index: 10;
 }
 
 .nav-bar {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: right;
     width: 75vw;
@@ -69,95 +85,11 @@
 
 .sl-nav {
     z-index: 30;
-    display: inline;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
 }
 
-.sl-nav a {
-    width: 120px
-}
-.sl-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-    display: inline-block;
-}
-
-.sl-nav li {
-    cursor: pointer;
-    padding-bottom: 10px;
-    color: #000;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.3px;
-}
-
-.sl-nav li ul {
-    display: none;
-}
-
-.sl-nav li:hover ul {
-    position: absolute;
-    top: 29px;
-    right: -15px;
-    display: block;
-    background: #fff;
-    width: 130px;
-    padding-top: 0px;
-    z-index: 2;
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-.sl-nav li:hover .triangle {
-    position: absolute;
-    top: 15px;
-    right: -10px;
-    z-index: 10;
-    height: 14px;
-    overflow: hidden;
-    width: 30px;
-    background: transparent;
-}
-
-.sl-nav li:hover .triangle:after {
-    content: '';
-    display: block;
-    z-index: 20;
-    width: 15px;
-    transform: rotate(45deg) translateY(0px) translatex(10px);
-    height: 15px;
-    background: #fff;
-    border-radius: 2px 0px 0px 0px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-.sl-nav li ul li {
-    position: relative;
-    text-align: left;
-    background: transparent;
-    padding: 15px 15px;
-    padding-bottom: 0;
-    z-index: 3;
-    font-size: 15px;
-    color: #3c3c3c;
-}
-
-.sl-nav li ul li:last-of-type {
-    padding-bottom: 15px;
-}
-
-.sl-nav li ul li span {
-    padding-left: 5px;
-}
-
-.sl-nav li ul li span:hover,
-.sl-nav li ul li span.active {
-    color: #146c78;
-}
 
 .sl-flag {
     display: inline-block;
@@ -190,11 +122,11 @@
     justify-content: space-around;
 }
 
-.bottom_nav-bar a {
+/* .bottom_nav-bar a {
     padding: 0 100px !important;
-}
+} */
 
-.header__upper a,
+.header__upper a:not(.sl-nav a),
 .header__bottom a {
     text-decoration: none;
     outline: none;
@@ -205,7 +137,19 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.72px;
-    padding-right: 136px;
+    margin-right: 136px;
+}
+
+.sl-nav a {
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.72px;
 }
 
 .upper__logo {
@@ -215,13 +159,14 @@
 
 .header__bottom {
     background-color: rgba(255, 255, 255, .44);
-    margin-top: 56px;
-    position: fixed;
     display: block;
+    position: fixed;
+    margin-top: 58px;
     flex-shrink: 0;
     width: 100vw;
     height: 41px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    z-index: 10;
 }
 
 .menu-icon {
@@ -283,6 +228,7 @@ div:where(.swal2-container) .swal2-html-container {
     margin-top: 235px;
     padding-left: 4vw;
     height: fit-content;
+    z-index: 0;
 }
 
 .main-control h1 {
@@ -311,6 +257,7 @@ div:where(.swal2-container) .swal2-html-container {
 }
 
 .main-control button {
+    z-index: 1;
     margin-right: 55px;
     cursor: pointer;
     color: #FFF;
@@ -324,10 +271,15 @@ div:where(.swal2-container) .swal2-html-container {
     width: 219px;
     height: 61px;
     flex-shrink: 0;
-    border-radius: 20px;
+    border-radius: 6px;
     background: #1D9EF9;
     box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
     border: 0;
+}
+
+.main-control button:hover {
+    background-color: #36a9fa;
+    transition: .22s ease-in-out;
 }
 
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
@@ -343,6 +295,154 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     flex-shrink: 0;
     background: #1D9EF9;
     border: 0;
+}
+
+.b-button {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.675px;
+    height: 61px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #1D9EF9;
+    box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.25);
+    border: 0;
+    text-decoration: none;
+}
+.b-button:hover {
+    background: #36a9fa;
+    transition: .22s ease-in-out;
+}
+
+.tariff-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.tariff-plan {
+    margin: 0 35px 0 35px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 324px;
+    height: 100%;
+    padding: 36px 36px 48px;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,51,153,.04), 0 2px 2px rgba(0,51,153,.08);
+    background: #fff;
+    transition: box-shadow .2s;
+}
+
+.tariff-plan__price {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+}
+
+.tariff-plan__upgrade {
+    color: #667695;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.descript__container {
+    height: 200px;
+}
+.tariff-plan__descript {
+    font-family: "Inter";
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.tariff-plan__sss {
+    margin-top:21px;
+    position: relative;
+    padding-left: 36px;
+    color: #667695;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: normal;
+    /* font-family: 12px Inter,Arial,Helvetica Neue,Helvetica,FreeSans,sans-serif */
+    font-family: 'Arimo'
+}
+
+.tariff-plan__sss:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: 11px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://i.imgur.com/flStUNw.png);
+}
+
+.tariff-plan__name {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.tariff-plan__divider {
+    height: 1px;
+    margin-top: 13px;
+    margin-bottom: 25px;
+    background: #dfe4ec;
+}
+
+.name__title {
+    margin: 66px 0 12px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 600;
+    letter-spacing: -.02em;
+}
+
+.languauge-ru {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 0 6px;
+    line-height: 14px;
+    border: none;
+    background: 0 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.language-ru {
+    padding-right: 5px;
+}
+
+.language-ru :hover, .language-en :hover, .header__upper a:hover, .header__bottom a:hover {
+    color:#1D9EF9!important;
+    transition: .22s ease-in-out;
+}
+
+.language-en {
+    padding-left: 5px;
+    border-left: .15rem solid #000000;
 }
 
 
@@ -380,6 +480,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 } */
 
 @media screen and (max-width: 890px) {
+    * {
+        overflow: hidden;
+    }
     .nav-bar {
         display: none;
         position: absolute !important;
