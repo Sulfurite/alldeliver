@@ -179,8 +179,10 @@ body {
 
 .showcase {
     display: block;
+    width: 100%;
     margin-left: 42vw;
-    height: var(--height);
+    height: 44.485vw;
+    max-height: 700px;
     width: fit-content;
 }
 
@@ -328,9 +330,10 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     display: flex;
     justify-content: center;
     margin-top: 150px;
+    flex-wrap: wrap;
 }
 .tariff-plan {
-    margin: 0 35px 0 35px;
+    margin: 60px 35px 0 35px;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -420,7 +423,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     letter-spacing: -.02em;
 }
 
-.languauge-ru {
+.language-ru {
     display: inline-block;
     margin-top: 7px;
     padding: 0 6px;
@@ -429,20 +432,37 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     background: 0 0;
     text-decoration: none;
     color: inherit;
+    padding-right: 5px!important;
 }
-
-.language-ru {
-    padding-right: 5px;
-}
-
 .language-ru :hover, .language-en :hover, .header__upper a:hover, .header__bottom a:hover {
     color:#1D9EF9!important;
     transition: .22s ease-in-out;
 }
 
 .language-en {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 0 6px;
+    line-height: 14px;
+    border: none;
+    background: 0 0;
+    text-decoration: none;
+    color: inherit;
     padding-left: 5px;
     border-left: .15rem solid #000000;
+}
+
+
+.language-en, .language-ru {
+
+    height: 20px
+}
+.Language__text {
+    margin-top: 0!important;
+}
+
+.Language {
+    margin-bottom: 10px
 }
 
 
@@ -480,8 +500,24 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 } */
 
 @media screen and (max-width: 890px) {
-    * {
-        overflow: hidden;
+    .header__upper a:not(.sl-nav a), .header__bottom a {
+        margin-right: 0!important
+
+
+    }
+    .main-control {
+        margin-top: 130px;
+    }
+    .name__title {
+        font-size: 48px
+    }
+    .tariff-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tariff-plan {
+        margin-top: 50px;
     }
     .nav-bar {
         display: none;
@@ -503,7 +539,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(29, 158, 249, .44);
+        background-color: rgba(29, 158, 249, .55);
         margin-top: -5px;
         width: 100%;
     }
@@ -514,6 +550,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
         margin-bottom: 15px;
     }
 
+    .reg {
+        margin-bottom: 5px!important
+    }
     .nav-bar.responsive a:nth-child(1) {
         margin-top: 20px
     }
