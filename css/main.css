@@ -329,7 +329,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 .tariff-container {
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 50px;
     flex-wrap: wrap;
 }
 .tariff-plan {
@@ -452,6 +452,9 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     border-left: .15rem solid #000000;
 }
 
+.tariff-wrapper {
+    margin-top: 33%
+}
 
 .language-en, .language-ru {
 
@@ -502,8 +505,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 @media screen and (max-width: 890px) {
     .header__upper a:not(.sl-nav a), .header__bottom a {
         margin-right: 0!important
-
-
     }
     .main-control {
         margin-top: 130px;
@@ -511,14 +512,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     .name__title {
         font-size: 48px
     }
-    .tariff-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .tariff-plan {
-        margin-top: 50px;
-    }
     .nav-bar {
         display: none;
         position: absolute !important;
