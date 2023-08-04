@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="./libs/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
@@ -46,8 +49,8 @@
 
         <div class="header__bottom">
             <div class="bottom_nav-bar">
-                <a href="#why" class="active">Преимущества</a>
-                <a href="#name__title">Наши тарифы</a>
+                <a href="#advantages" class="active">Преимущества</a>
+                <a href="#tariff">Наши тарифы</a>
                 <a href="#faq">FAQ</a>
             </div>
         </div>
@@ -63,15 +66,62 @@
             <button>Приобрести</button>
         </div>
         <div class="showcase">
-            <img src="images/PLATIRU.jpg" class="showcase__image"></img>
+            <div class="showcase__image"></div>
         </div>
 
-        <div class="tariff-wrapper">
-            <h1 id="name__title" class="name__title">Наши тарифы</h1>
+        <div class="advantage-wrapper swiper scroll-1">
+            <h1 class="name__title" id="advantages">Почему именно мы?</h1>
 
-            <div class="tariff-container">
+            <div class="advantage-container swiper-wrapper">
+                <div class="advantage swiper-slide">
+                    <div class="advantage-icon safety"></div>
+                    <div class="advantage-title">
+                        Безопасность
+                    </div>
+                    <div class="advantage-divider"></div>
+                    <div class="advantage-descript">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore, ab numquam
+                        mollitia earum quisquam consectetur, aliquid fugiat natus molestias neque sed perferendis
+                        incidunt tenetur vel, corporis eos perspiciatis consequuntur.
+                    </div>
+                </div>
+                <div class="advantage swiper-slide">
+                    <div class="advantage-icon cog"></div>
+                    <div class="advantage-title">
+                        Безопасность
+                    </div>
+                    <div class="advantage-divider"></div>
+                    <div class="advantage-descript">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore, ab numquam
+                        mollitia earum quisquam consectetur, aliquid fugiat natus molestias neque sed perferendis
+                        incidunt tenetur vel, corporis eos perspiciatis consequuntur.
+                    </div>
+                </div>
+                <div class="advantage swiper-slide">
+                    <div class="advantage-icon dollar"></div>
+                    <div class="advantage-title">
+                        Безопасность
+                    </div>
+                    <div class="advantage-divider"></div>
+                    <div class="advantage-descript">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore, ab numquam
+                        mollitia earum quisquam consectetur, aliquid fugiat natus molestias neque sed perferendis
+                        incidunt tenetur vel, corporis eos perspiciatis consequuntur.
+                    </div>
+                </div>
+            </div>
 
-                <div class="tariff-plan">
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div class="tariff-wrapper swiper">
+            <h1 id="tariff" class="name__title">Наши тарифы</h1>
+
+            <div class="tariff-container swiper-wrapper">
+
+                <div class="tariff-plan swiper-slide">
                     <div>
                         <div class="tariff-plan__name">Trial — версия</div>
 
@@ -97,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="tariff-plan">
+                <div class="tariff-plan swiper-slide">
                     <div>
                         <div class="tariff-plan__name">Trial — версия</div>
 
@@ -123,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="tariff-plan">
+                <div class="tariff-plan swiper-slide">
                     <div>
                         <div class="tariff-plan__name">Trial — версия</div>
 
@@ -151,22 +201,67 @@
                 </div>
 
             </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-scrollbar"></div>
         </div>
+
+
+
+        <article class="b-questions">
+            <div class="b-hosting__popular-questions">
+                
+                    
+                <h1 class="name__title" id="advantages">
+                    Остались вопросы?
+                </h1>
+                
+        
+                    <dl class="b-list-expander b-list-expander_size_giant b-list-expander_style_selectable  b-questions__expander">
+            
+        
+            <dt class="b-list-expander__item b-list-expander__itemb-questions__second-level-title b-questions__second-level-title_default-typography  b-list-expander__item_state_collapse
+                 b-list-expander__item-title b-questions__second-level-title b-questions__second-level-title_default-typography ">
+                
+                    
+                        <span class="b-list-expander__item-icon-new b-questions__icon "></span>
+                    
+                Как это работает?</dt>
+            <dd class="b-list-expander__item-content b-text b-questions__second-level-content " >
+                
+                    <div itemprop="text">
+            </dd>   
+                </div>
+                    
+            </div>
+        </article>
+
+
 
 
     </main>
 
-
-
-
-
-
+    </li>
+    </ul>
+    <div class="cookiePopup__wrapper"
+        style="animation: 0.5s ease-out 0s 1 normal none running slideInFromBottom; bottom: 0px;">
+        <div class="cookiePopup__container">
+            <div class="cookiePopup__content">Мы используем файлы cookie. Продолжив работу с сайтом, вы соглашаетесь с
+                <div class="cookiePopup_link"><a class="cookiePopup_link-text" target="_blank"
+                        href="/ua/privacy">Политикой обработки персональных данных</a></div> и <a
+                    class="cookiePopup_link-text" target="_blank" href="/ua/privacy">Правилами пользования сайтом</a>.
+            </div><button onClick="hideModal()">СОГЛАШАЮСЬ</button>
+        </div>
+    </div>
 
 
 
 
     <div style="height: 3000px"></div>
+
     <!-- Header -->
+
     <script>
         function onMenuClick() {
             var navbar = document.getElementById("navigation-bar");
@@ -179,6 +274,7 @@
             ul.style.display = ul.style.display == "none" ? "block" : "none"
         }
     </script>
+
     <!-- Initialize dynamic text -->
     <script>
         async function dynamicText(i = 0, delay = 200, between = 5000) {
@@ -219,10 +315,15 @@
         }
         window.addEventListener('load', dynamicText());
     </script>
-    <!-- End -->
 
     <!-- Initialize modals -->
     <script>
+        function hideModal() {
+            const modal = document.querySelector('.cookiePopup__wrapper')
+            modal.classList.toggle('active')
+            document.cookie = 'accept = true'
+            console.log(document.cookie)
+        }
         function showMore() {
             Swal.fire(
                 'Подробнее',
@@ -230,8 +331,14 @@
                 'question'
             )
         }
+
+        window.addEventListener('load', function (e) {
+
+            if(!document.cookie.includes('accept=true')) {
+                const modal = document.querySelector('.cookiePopup__wrapper').classList.toggle('active')
+            }
+        })
     </script>
-    <!-- End -->
 
     <!-- initHeight -->
     <script>
@@ -241,11 +348,73 @@
         }
         window.addEventListener('load', initHeight());
     </script>
-    <!-- End -->
 
     <!-- Smooth scroll -->
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {offset: 110});
+        var scroll = new SmoothScroll(
+            'a[href*="#"]', { offset: 110 }
+        );
+    </script>
+
+    <!-- Init Swiper -->
+    <script>
+        class swiper {
+            swiperInst;
+            isInited;
+            params;
+            constructor(params) {
+                this.isInited = false
+                this.params = params
+                this.swiperInst = null
+            }
+
+            init() {
+                const swiper1 = new Swiper('.swiper', this.params);
+                this.swiperInst = swiper1
+                this.isInited = true
+            }
+
+            destroy() {
+                this.swiperInst.forEach(swiperInstance => swiperInstance.destroy())
+                this.isInited = false
+                this.swiperInst = null
+            }
+
+            isInited() {
+                return this.isInited
+            }
+        }
+
+        const swiperInstance = new swiper({
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+        if (window.innerWidth <= 890) {
+            swiperInstance.init()
+        }
+
+        window.addEventListener('resize', function (e) {
+            const width = window.innerWidth
+            if (width <= 890) {
+                if (!swiperInstance.isInited) swiperInstance.init()
+            } else {
+                if (swiperInstance.isInited) {
+                    swiperInstance.destroy()
+
+                }
+            }
+        })
     </script>
 </body>
 

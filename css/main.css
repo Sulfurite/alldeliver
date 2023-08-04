@@ -138,6 +138,7 @@ body {
     line-height: normal;
     letter-spacing: 0.72px;
     margin-right: 136px;
+    margin-top:13px
 }
 
 .sl-nav a {
@@ -199,7 +200,7 @@ main {
     flex-shrink: 0;
     border-radius: 34px;
     border: 2px solid #000;
-    background: url("../images/PLATIRU.png"), lightgray 50% / cover no-repeat;
+    background: url(../images/PLATIRU.jpg), lightgray 50% / cover no-repeat;
     z-index: -2;
     box-shadow: 0px 4px 18px 0px rgba(0, 51, 153, 0.90);
     filter: blur(5px);
@@ -246,7 +247,81 @@ div:where(.swal2-container) .swal2-html-container {
     letter-spacing: 2.16px;
     padding-bottom: 16px;
 }
+  
+.advantage-wrapper {
+    margin-top: 33%
+}
+.advantage-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.advantage {
+    margin: 60px 35px 5px 35px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 324px;
+    height: 100%;
+    padding: 36px 36px 48px;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,51,153,.04), 0 2px 2px rgba(0,51,153,.08);
+    background: #fff;
+    transition: box-shadow .2s;
+    align-items: center;
+}
 
+.advantage:hover, .tariff-plan:hover {
+    box-shadow: 0 4px 16px rgba(0,51,153,.12), 0 2px 2px rgba(0,51,153,.16);
+    transition: .22s ease-in-out;
+}
+.advantage-divider {
+    height: 1px;
+    width: 100%;
+    background: #dfe4ec;
+    margin-bottom: 25px
+}
+
+.advantage-title {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1.08px;
+}
+.advantage-descript {
+    color: #667695;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.advantage-icon:not(.dollar) {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 5px
+}
+.safety {
+    background: url(../images/safety.png);
+}
+.cog {
+    background: url(../images/cog.png);
+}
+.dollar {
+    margin-bottom: 5px;
+    background: url(../images/dollar.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 60px;
+    flex-shrink: 0;
+}
 .main-control h2 {
     color: #364364;
     font-family: Inter;
@@ -271,11 +346,12 @@ div:where(.swal2-container) .swal2-html-container {
     line-height: normal;
     letter-spacing: 0.675px;
     width: 219px;
+    margin-bottom: 20px;
     height: 61px;
     flex-shrink: 0;
     border-radius: 6px;
     background: #1D9EF9;
-    box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.25);
     border: 0;
 }
 
@@ -397,7 +473,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(https://i.imgur.com/flStUNw.png);
+    background-image: url(../images/infoIcon.png);
 }
 
 .tariff-plan__name {
@@ -453,7 +529,8 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 }
 
 .tariff-wrapper {
-    margin-top: 33%
+    margin-top: 15%;
+    padding-bottom:10px;
 }
 
 .language-en, .language-ru {
@@ -468,6 +545,162 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     margin-bottom: 10px
 }
 
+.cookiePopup__wrapper {
+    position: fixed;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    z-index: 10;
+}
+
+.cookiePopup__wrapper.active {
+    display: flex;
+}
+
+.cookiePopup__container {
+    padding: 15px;
+    margin: 30px;
+    background-color: hsla(0,0%,100%,.95);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 48px rgba(17,56,86,.2);
+}
+
+.cookiePopup__content {
+    color: #080808;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+.cookiePopup_link {
+    display: inline-block;    
+}
+
+.cookiePopup_link-text {
+    color: #1d9ef9!important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cookiePopup_link-text:hover {
+    text-decoration: underline;
+}
+
+.cookiePopup__container button {
+    margin-left: 50px;
+    font-weight: 700;
+    color: #000000;
+    padding: 10px;
+}
+
+.cookiePopup__container button:hover {
+    color: #1d9ef9!important;
+}
+
+button, select {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #000;
+}
+
+.b-questions__expander {
+    border-top: 1px solid #dfe4ec;
+    margin-bottom: 36px;
+}
+
+.b-hosting-landing * {
+    box-sizing: border-box;
+}
+
+.b-questions__second-level-title {
+    box-sizing: border-box;
+    padding: 24px 72px 24px 0;
+    margin: 0;
+    border-collapse: collapse;
+    border-bottom: 1px solid #dfe4ec;
+    line-height: 24px;
+    vertical-align: middle;
+    background: transparent;
+}
+
+.b-list-expander__item-icon-new {
+    position: absolute;
+    top: 50%!important;
+    right: 10px;
+    width: 54px;
+    height: 53px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    background-image: url(/dist/ds-icons__arrow-more_black-800.1ecaf34….svg);
+}
+
+.b-questions__second-level-title_default-typography {
+    font-size: 16px!important;
+    line-height: 26px!important;
+    font-weight: 600!important;
+    letter-spacing: normal!important;
+}
+
+.b-list-expander__item-title {
+    color: #364364;
+    font: 700 20px/24px Inter,Arial,Helvetica Neue,Helvetica,FreeSans,sans-serif;
+    cursor: pointer;
+}
+
+.b-list-expander__item {
+    position: relative;
+    background: #f2f4f9;
+    cursor: pointer;
+    transition: background-color .1s ease-in-out;
+}
+
+.b-questions__second-level-content {
+    padding-bottom: 36px;
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid #dfe4ec;
+}
+
+.b-text {
+    padding: 0;
+    color: #364364;
+    font: 15px/24px Inter,Arial,Helvetica Neue,Helvetica,FreeSans,sans-serif;
+    margin: 0 0 24px;
+}
+
+.b-list-expander__item-content {
+    display: none;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.b-list-expander__item-icon-new {
+    position: absolute;
+    top: 50%!important;
+    right: 10px;
+    width: 54px;
+    height: 53px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    background-image: url(/dist/ds-icons__arrow-more_black-800.1ecaf34….svg);
+}
+
+.b-list-expander_style_selectable .b-list-expander__item.b-list-expander__item-title {
+    font-weight: 400;
+}
+
+
 
 @media screen and (max-width: 820) {
     .header__upper {
@@ -478,8 +711,8 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
 
 @media screen and (max-width: 1400px) {
     .showcase__image {
-        width: 1630px;
-        height: 70vh
+        height: 70vh;
+        width: 1600px;
     }
 }
 
@@ -495,14 +728,37 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     }
 }
 
-/*
 @media screen and (max-width: 389px) {
     .showcase {
         margin-top: 40vh
     }
-} */
+}
 
 @media screen and (max-width: 890px) {
+    .scroll-1 {
+        height: 630px!important; 
+    }
+    .swiper {
+        width: 324px;
+        height: 730px;
+    }
+
+    .tariff-container, .advantage-container {
+        justify-content: unset!important;
+        margin-top: 0;
+        flex-wrap: nowrap;
+    }
+
+    .swiper-1 {
+        width: 324px;
+        height: 461px
+    }
+
+    .tariff-plan, .advantage {
+        width: 324px!important;
+        margin: 0;
+        justify-content: unset;
+    }
     .header__upper a:not(.sl-nav a), .header__bottom a {
         margin-right: 0!important
     }
@@ -511,6 +767,10 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     }
     .name__title {
         font-size: 48px
+    }
+    
+    #tariff {
+        margin-bottom: 66px!important
     }
 
     .nav-bar {
@@ -541,7 +801,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     .nav-bar.responsive a,
     button {
         padding: 0;
-        margin-bottom: 15px;
     }
 
     .reg {
@@ -551,7 +810,8 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
         margin-top: 20px
     }
 
-    .showcase {}
+    .showcase {
+    }
 
     .nav-bar a {
         display: block;
