@@ -62,8 +62,10 @@
         <div class="main-control">
             <h1>Революционный продукт для вашего бизнеса.</h1>
             <h2>Автоматическая доставка товара на <span id="dynamicText"></span></h2>
-            <button onclick="showMore()">Подробнее</button>
-            <button>Приобрести</button>
+            <div class="control-buttons">
+                <button onclick="showMore()">Подробнее</button>
+                <button>Приобрести</button>
+            </div>
         </div>
         <div class="showcase">
             <div class="showcase__image"></div>
@@ -368,191 +370,25 @@
     </footer>
 
     <!-- Header -->
-
-    <script>
-        function onMenuClick() {
-            var navbar = document.getElementById("navigation-bar");
-            var responsive_class_name = "responsive";
-
-            navbar.classList.toggle(responsive_class_name);
-        }
-        function showLanguages() {
-            const ul = document.querySelector('.language-dropdown')
-            ul.style.display = ul.style.display == "none" ? "block" : "none"
-        }
-    </script>
+    <script src="./js/header.js"></script>
 
     <!-- Initialize dynamic text -->
-    <script>
-        async function dynamicText(i = 0, delay = 200, between = 5000) {
-            const arr = ['Digiseller', 'Plati Market', 'GGSELL', 'FunPay']
-            const element = document.querySelector('#dynamicText')
-            let text = element.innerHTML
-            if (!text.length) {
-                for (let j = 0; j < arr[i].length; j++) {
-                    element.innerHTML += arr[i][j]
-                    await new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            return resolve();
-                        }, delay);
-                    });
-                }
-                i++
-                await new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        return resolve();
-                    }, between);
-                });
-                dynamicText(i)
-            } else {
-                for (let j = 0; j < text.length; j++) {
-                    element.innerHTML = element.innerHTML.substring(0, element.innerHTML.length - 1)
-                    await new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            return resolve();
-                        }, delay);
-                    });
-                }
-                if (i == arr.length) {
-                    i = 0
-                }
-                dynamicText(i)
-            }
-
-        }
-        window.addEventListener('load', dynamicText());
-    </script>
+    <script src="./js/dynamicText.js"></script>
 
     <!-- Initialize modals -->
-    <script>
-        function hideModal() {
-            const modal = document.querySelector('.cookiePopup__wrapper')
-            modal.classList.toggle('active')
-            document.cookie = 'accept = true'
-            console.log(document.cookie)
-        }
-        function showMore() {
-            Swal.fire(
-                'Подробнее',
-                'Прив',
-                'question'
-            )
-        }
-
-        window.addEventListener('load', function (e) {
-
-            if (!document.cookie.includes('accept=true')) {
-                const modal = document.querySelector('.cookiePopup__wrapper').classList.toggle('active')
-            }
-        })
-    </script>
+    <script src="./js/modals.js"></script>
 
     <!-- initHeight -->
-    <script>
-        function initHeight() {
-            let img = document.querySelector('.showcase__image')
-            document.querySelector('.showcase').style.cssText = `height: ${img.offsetHeight + 400}px`
-        }
-        window.addEventListener('load', initHeight());
-    </script>
+    <script src="./js/height.js"></script>
 
     <!-- Smooth scroll -->
-    <script>
-        var scroll = new SmoothScroll(
-            'a[href*="#"]', { offset: 110 }
-        );
-    </script>
+    <script src="./js/smoothScroll.js"></script>
 
     <!-- Init Swiper -->
-    <script>
-        class swiper {
-            swiperInst;
-            isInited;
-            params;
-            constructor(params) {
-                this.isInited = false
-                this.params = params
-                this.swiperInst = null
-            }
+    <script src="./js/swiper.js"></script>
 
-            init() {
-                const swiper1 = new Swiper('.swiper', this.params);
-                this.swiperInst = swiper1
-                this.isInited = true
-            }
-
-            destroy() {
-                this.swiperInst.forEach(swiperInstance => swiperInstance.destroy())
-                this.isInited = false
-                this.swiperInst = null
-            }
-
-            isInited() {
-                return this.isInited
-            }
-        }
-
-        const swiperInstance = new swiper({
-            // Optional parameters
-            direction: 'horizontal',
-            loop: false,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        })
-        if (window.innerWidth <= 890) {
-            swiperInstance.init()
-        }
-
-        window.addEventListener('resize', function (e) {
-            const width = window.innerWidth
-            if (width <= 890) {
-                if (!swiperInstance.isInited) swiperInstance.init()
-            } else {
-                if (swiperInstance.isInited) {
-                    swiperInstance.destroy()
-
-                }
-            }
-        })
-    </script>
     <!-- FAQ -->
-    <script>
-        const accordionItemHeaders = document.querySelectorAll(
-            ".accordion-item-header"
-        );
-
-        accordionItemHeaders.forEach((accordionItemHeader) => {
-            accordionItemHeader.addEventListener("click", (event) => {
-                // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-
-                const currentlyActiveAccordionItemHeader = document.querySelector(
-                    ".accordion-item-header.active"
-                );
-                if (
-                    currentlyActiveAccordionItemHeader &&
-                    currentlyActiveAccordionItemHeader !== accordionItemHeader
-                ) {
-                    currentlyActiveAccordionItemHeader.classList.toggle("active");
-                    currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-                }
-                accordionItemHeader.classList.toggle("active");
-                const accordionItemBody = accordionItemHeader.nextElementSibling;
-                if (accordionItemHeader.classList.contains("active")) {
-                    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-                } else {
-                    accordionItemBody.style.maxHeight = 0;
-                }
-            });
-        });
-    </script>
+    <script src="./js/faq.js"></script>
 </body>
 
 </html>
