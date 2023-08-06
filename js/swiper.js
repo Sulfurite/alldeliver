@@ -38,11 +38,6 @@ function initSwiper() {
         pagination: {
             el: '.swiper-pagination',
         },
-    
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
     })
     if (window.innerWidth <= 890) {
         swiperInstance.init()
