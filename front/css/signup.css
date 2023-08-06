@@ -112,12 +112,21 @@ body {
         white-space: nowrap;
     }
 }
-@media screen and (max-width: 890px) {
+
+@media screen and (max-width: 390px) {
     footer {
         position: unset!important
     }
+}
+@media screen and (max-width: 890px) {
+    .footer-logo {
+        padding-left: 0!important;
+    }
     .control-list {
         margin-right: 0!important;
+    }
+    .footer-copyright-li {
+        margin-left:0!important
     }
     .footer-copyright__text {
         text-align: center;
