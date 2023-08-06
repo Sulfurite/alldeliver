@@ -23,6 +23,10 @@ class swiper {
     isInited() {
         return this.isInited
     }
+
+    update() {
+        this.swiperInst.forEach(swiperInstance => swiperInstance.update())
+    }
 }
 
 function initSwiper() {
@@ -38,15 +42,18 @@ function initSwiper() {
         pagination: {
             el: '.swiper-pagination',
         },
+
     })
     if (window.innerWidth <= 890) {
         swiperInstance.init()
+        swiperInstance.update()
     }
     
     window.addEventListener('resize', function (e) {
         const width = window.innerWidth
         if (width <= 890) {
             if (!swiperInstance.isInited) swiperInstance.init()
+            swiperInstance.update()
         } else {
             if (swiperInstance.isInited) {
                 swiperInstance.destroy()
@@ -54,6 +61,8 @@ function initSwiper() {
             }
         }
     })
+
+    swiperInstance.update()
 }
 
 window.addEventListener('load', initSwiper)
