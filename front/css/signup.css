@@ -113,6 +113,12 @@ body {
     }
 }
 @media screen and (max-width: 890px) {
+    footer {
+        position: unset!important
+    }
+    .control-list {
+        margin-right: 0!important;
+    }
     .footer-copyright__text {
         text-align: center;
     }
