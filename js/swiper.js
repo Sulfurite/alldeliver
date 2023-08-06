@@ -25,36 +25,40 @@ class swiper {
     }
 }
 
-const swiperInstance = new swiper({
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    autoplay: {
-        delay: 3000
-    },
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-})
-if (window.innerWidth <= 890) {
-    swiperInstance.init()
+function initSwiper() {
+    const swiperInstance = new swiper({
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 3000
+        },
+    
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+    if (window.innerWidth <= 890) {
+        swiperInstance.init()
+    }
+    
+    window.addEventListener('resize', function (e) {
+        const width = window.innerWidth
+        if (width <= 890) {
+            if (!swiperInstance.isInited) swiperInstance.init()
+        } else {
+            if (swiperInstance.isInited) {
+                swiperInstance.destroy()
+    
+            }
+        }
+    })
 }
 
-window.addEventListener('resize', function (e) {
-    const width = window.innerWidth
-    if (width <= 890) {
-        if (!swiperInstance.isInited) swiperInstance.init()
-    } else {
-        if (swiperInstance.isInited) {
-            swiperInstance.destroy()
-
-        }
-    }
-})
+window.addEventListener('load', initSwiper)
