@@ -28,7 +28,10 @@ class swiper {
 const swiperInstance = new swiper({
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: true,
+    autoplay: {
+        delay: 3000
+    },
 
     // If we need pagination
     pagination: {
