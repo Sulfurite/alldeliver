@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/orders.css">
+    <script src="./libs/sweetalert2/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./libs/sweetalert2/sweetalert2.min.css">
+    <script src="https://kit.fontawesome.com/ea9459630b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="">
+        <div class="header__logo ">
+            <a href="#main"><img src="./images/ADelivery_white.png" alt=""></a>
+            <div class="menu-icon">
+                <button>
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="header__top">
+            <div class="user__settings">
+                <div class="dropdown">
+                    <i class="fa-solid fa-chevron-down dropbtn"></i>
+                    <div class="dropdown-content">
+                      <a href="#">Настройки</a>
+                      <a href="#">Выйти</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="user__info">
+                <span class="user__head">
+                    <p>Username</p>
+                </span>
+                <span class="user__role">
+                    <p>Class</p>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="">
+        <div class="main__sidebar">
+            <div class="scrollbar-sidebar">
+                <div class="sidebar__inner">
+                    <ul class="vertical-menu">
+                        <li class="main__sidebar__heading"><i class="fa-solid fa-user fa-sm"
+                                style="margin-right: 10px"></i>Панель управления</li>
+                        <li>
+                            <a href="" class="list">Статистика</a>
+                            <a href="" class="list active">Активные заказы</a>
+                            <a href="" class="list">Управление товарами</a>
+                        </li>
+                    </ul>
+                    <div class="shortened-menu">
+                        <ul>
+                            <li><a href="#"  class=""><i class="fa-solid fa-chart-simple fa-xl" style="color: #3f6ad8;"></i></a>
+                            </li>
+                            <li><a href="#" class="active"><i class="fa-solid fa-business-time fa-xl" style="color: #3f67d8;"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="fa-solid fa-inbox fa-xl" style="color: #3f67d8;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <li>
+        </div>
+        <div class="main__outer">
+            <div class="main__inner">
+                <div class="main__title">
+                    <div class="main-title-wrapper">
+                        <div class="main-title-heading">
+                            <div class="main-title-icon">
+                                <i class="fa-solid fa-business-time fa-sm" style="color: #3f6ad8;"></i>
+                            </div>
+                            <div>Панель управления
+                                <div class="main-title-subheading">Универсальная панель для управления новыми
+                                    заказами с личного кабинета
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_header">
+                <div class="order__search">
+                        <div class="filter__wrapper">
+                            <input type="text" class="filter__bar" placeholder="Введите текст"/>
+                        </div>
+                        <button class="search__icon"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-ms"></i></button>
+                </div>
+            </div>
+                <div class="order__header">
+                    <h1 class="order__title"> Активные заказы </h1>
+                </div>
+                <div class="order__table">
+                        <table>
+                            <thead class="table__header">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Order</th>
+                                    <th>Order1</th>
+                                    <th>Order2</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="table__row">
+                                    <td class="muted">#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td><button onclick="details(this)">Details</button></td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="muted">#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td><button onclick="details(this)">Details</button></td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="muted">#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td><button onclick="details(this)">Details</button></td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="muted">#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td><button onclick="details(this)">Details</button></td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="muted">#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td><button onclick="details(this)">Details</button></td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="muted">#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td>#345</td>
+                                    <td><button onclick="details(this)">Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+                <div class="order__bottom">
+                    <button><i class="fa-solid fa-chevron-left fa-sm muted"></i></button>
+                    <button><i class="fa-solid fa-chevron-right fa-sm muted"></i></button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const hamburger = document.querySelector('.menu-icon')
+            hamburger.addEventListener('click', function () {
+                if (document.body.clientWidth > 890) {
+                    const header = document.querySelector('header')
+                    const main = document.querySelector('main')
+                    header.classList.toggle('mobile')
+                    main.classList.toggle('short')
+                } else {
+                    const sidebar = document.querySelector('.main__sidebar')
+                    const main = document.querySelector('main')
+                    main.classList.remove('short')
+                    sidebar.classList.toggle('visible')
+                }
+            })
+    
+            const dropdown = document.querySelector('.dropdown')
+            dropdown.addEventListener('click', function () {
+                dropdown.classList.toggle('active')
+            })
+
+            function details(target) {
+                console.log(target.closest('.table__row'))
+                Swal.fire(
+                    's',
+                    's',
+                    'question'
+                )
+            }
+            function content(value) {
+                return `
+                    <div class="filter__content">
+                        <a href="?name=${value}">${value} в name</a>
+                        <a href="#">${value} в name</a>
+                        <a href="#">${value} в name</a>
+                    </div>
+                `
+            }
+            function showFilters(e) {
+                const value = e.target.value
+                const searchDiv = document.querySelector('.filter__wrapper')
+                const check = document.querySelector('.filter__dropdown')
+                
+                if(check && value.length) {
+                    check.innerHTML = content(value)
+                    return
+                } else if(!value.length && check) {
+                    searchDiv.removeChild(check)
+                    return
+                }
+                const div = document.createElement('div')
+                div.classList.add('filter__dropdown')
+                div.innerHTML = content(value)
+                searchDiv.appendChild(div)
+                console.log(e)
+                
+            }
+            const filterBar = document.querySelector('.filter__bar')
+            filterBar.addEventListener('propertychange', showFilters)
+            filterBar.addEventListener('input', showFilters)
+        </script>
+</body>
+
+</html>

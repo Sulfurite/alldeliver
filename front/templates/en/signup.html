@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <header>
+        <div class="header__upper">
+            <div class="upper__logo">
+                <a href="/"><img src="./images/ADelivery_white.png" alt=""></a>
+            </div>
+            <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div id="navigation-bar" class="nav-bar">
+                <div class="control-list">
+                    <a href="#" class="active auth">Войти</a>
+                    <a href="1" class="reg">Регистрация</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    
+    <section class="main-intro">
+        <div class="main-intro__container">
+            
+        </div>
+    </section>
+    <div class="wrapper">
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Регистрация</h1>
+                    <input type="text" placeholder="Имя" />
+                    <input type="email" placeholder="Электронная почта" />
+                    <input type="password" placeholder="Пароль" />
+                    <button>Зарегистрироваться</button>
+                    <button class="ghost mobile_in" id="signIn">Войти</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Авторизация</h1>
+                    <input type="email" placeholder="Электронная почта" />
+                    <input type="password" placeholder="Пароль" />
+                    <a href="#">Забыли пароль?</a>
+                    <button>Вход</button>
+                    <button class="ghost mobile" id="signUp">Регистрация</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>С возвращением!</h1>
+                        <p>Уже зарегистрированы?</p>
+                        <button class="ghost" id="signIn">Войти</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Добро пожаловать!</h1>
+                        <p>Еще не зарегистрированы?</p>
+                        <button class="ghost" id="signUp">Регистрация</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer>
+            <div class="footer">
+                <ul class="footer-info">
+                    <li class="footer-logo">
+                        <img src="./images/ADelivery-black.png" alt="">
+                    </li>
+                    <li class="footer-copyright-li">
+                        <div class="footer-copyright">
+                            <p class="footer-copyright__text">Все права защищены. 2023-<span>2023</span></p>
+                            <p class="footer-copyright__text">
+                                <a href="" class="ds-link">Пользовательское соглашение</a> и
+                                <a href="" class="ds-link">правила пользования</a>.
+                            </p>
+                        </div>
+    
+                    </li>
+                    <li class="footer-contact">
+                            <div class="sl-nav">
+                                <ul>
+                                  <li><b class="sl-flag flag-ru current"></b>
+                                    <ul>
+                                      <a href="ua"><li><i class="sl-flag flag-ua"><div id="germany"></div></i> <span></span></li></a>
+                                      <a href="usa"><li><i class="sl-flag flag-usa"><div id="germany"></div></i> <span></span></li></a>
+                                      <li><i class="sl-flag flag-ru"><div ></div></i> <span class="active"></span></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                        </div>
+                        <div class="contact-container">
+                            <ul class="contacts">
+                                <li class="contact-item">
+                                    E-mail: <a href="mailto:contact@alldelivery.ru"
+                                        class="ds-link">contact@alldelivery.ru</a>
+                                </li>
+    
+                                <li class="contact-item">
+                                    Telegram: <a href="https://t.me/Sulfureba" class="ds-link">Sulfureba</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </li>
+                </ul>
+    
+            </div>
+    
+    
+        </footer>
+    
+
+    <!-- Header -->
+    <script src="./js/header.js"></script>
+    <script>
+        const signUpButton = document.querySelectorAll('#signUp');
+        const signInButton = document.querySelectorAll('#signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.forEach(button => {
+            button.addEventListener('click', () =>
+        container.classList.add('right-panel-active'));
+        })
+
+        signInButton.forEach(button => {
+            button.addEventListener('click', () =>
+        container.classList.remove('right-panel-active'));
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Document</title>
+    <script src="./libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="stylesheet" href="./libs/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body style="overflow-x: hidden;">
+
+    <header>
+        <div class="header__upper">
+            <div class="upper__logo">
+                <a href="#main"><img src="./images/ADelivery_white.png" alt=""></a>
+            </div>
+            <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div id="navigation-bar" class="nav-bar">
+                <div class="navigation-list">
+                    <a href="#advantages" class="active">Преимущества</a>
+                    <a href="#tariff">Наши тарифы</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="control-list">
+                    <a href="#" class="active auth">Войти</a>
+                    <a href="1" class="reg">Регистрация</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main id="main">
+
+        <section class="main-intro">
+            <div class="main-intro__container">
+                <h1 class="main-intro__title">
+                    <span class="main__text">Революционный продукт для вашего бизнеса</span>
+                    <span class="main__text _gradient">Автоматическая доставка товара на <span
+                            id="dynamicText"></span></span>
+                </h1>
+
+                <div class="main-control">
+                    <button onclick="showMore()">Подробнее</button>
+                    <button>Приобрести</button>
+                </div>
+
+
+
+            </div>
+            <img class="badge-long _funpay" draggable="false" src="./images/funpay.png" alt="">
+            <img class="badge-long _plati" draggable="false" src="./images/plati.png" alt="">
+            <img class="badge-short _global" draggable="false" src="./images/global.png" alt="">
+            <img class="badge-short _digiseller" draggable="false" src="./images/digiseller.png" alt="">
+            </div>
+        </section>
+
+        <!-- <div class="showcase">
+            <div class="showcase__image"></div>
+        </div> -->
+
+        <div class="advantage-wrapper swiper scroll-1">
+            <h1 class="name__title" id="advantages">Почему именно мы?</h1>
+
+            <div class="advantage-container swiper-wrapper">
+                <div class="advantage swiper-slide">
+                    <div class="advantage-icon safety"></div>
+                    <div class="advantage-title">
+                        Безопасность
+                    </div>
+                    <div class="advantage-divider"></div>
+                    <div class="advantage-descript">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore, ab numquam
+                        mollitia earum quisquam consectetur, aliquid fugiat natus molestias neque sed perferendis
+                        incidunt tenetur vel, corporis eos perspiciatis consequuntur.
+                    </div>
+                </div>
+                <div class="advantage swiper-slide">
+                    <div class="advantage-icon cog"></div>
+                    <div class="advantage-title">
+                        Безопасность
+                    </div>
+                    <div class="advantage-divider"></div>
+                    <div class="advantage-descript">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore, ab numquam
+                        mollitia earum quisquam consectetur, aliquid fugiat natus molestias neque sed perferendis
+                        incidunt tenetur vel, corporis eos perspiciatis consequuntur.
+                    </div>
+                </div>
+                <div class="advantage swiper-slide">
+                    <div class="advantage-icon dollar"></div>
+                    <div class="advantage-title">
+                        Безопасность
+                    </div>
+                    <div class="advantage-divider"></div>
+                    <div class="advantage-descript">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit inventore, ab numquam
+                        mollitia earum quisquam consectetur, aliquid fugiat natus molestias neque sed perferendis
+                        incidunt tenetur vel, corporis eos perspiciatis consequuntur.
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+        <div class="tariff-wrapper swiper">
+            <h1 id="tariff" class="name__title">Наши тарифы</h1>
+
+            <div class="tariff-container swiper-wrapper">
+
+                <div class="tariff-plan swiper-slide">
+                    <div>
+                        <div class="tariff-plan__name">Trial — версия</div>
+
+                        <div class="tariff-plan-wrapper" data-hosting-tariff-period="1">
+                            <div class="tariff-plan__price">329&nbsp;<span class="char-rouble-native">₽</span>/мес</div>
+                            <div class="tariff-plan__upgrade">Пробный, ограниченный режим для тестирования функционала
+                            </div>
+                        </div>
+
+
+                        <div class="tariff-plan__divider"></div>
+                        <div class="descript__container">
+                            <div class="tariff-plan__descript"><strong>Испытайте</strong> функционал</div>
+                            <div class="tariff-plan__descript"><strong>Неполный</strong> доступ к сервису*</div>
+                            <div class="tariff-plan__descript"><strong>10</strong> загружаемых ключей</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="b-button" href="1">Заказать</a>
+
+                        <div class="tariff-plan__sss">Неограниченный и бесконечный доступ к разделу Funpay</div>
+
+                    </div>
+                </div>
+
+                <div class="tariff-plan swiper-slide">
+                    <div>
+                        <div class="tariff-plan__name">Premium — версия</div>
+
+                        <div class="tariff-plan-wrapper" data-hosting-tariff-period="1">
+                            <div class="tariff-plan__price">329&nbsp;<span class="char-rouble-native">₽</span>/мес</div>
+                            <div class="tariff-plan__upgrade">Выбрав больший срок заказа, вы сможете сэкономить до 20%
+                            </div>
+                        </div>
+
+
+                        <div class="tariff-plan__divider"></div>
+                        <div class="descript__container">
+                            <div class="tariff-plan__descript"><strong>Полный</strong> доступ к сервису</div>
+                            <div class="tariff-plan__descript"><strong>Уникальная</strong> ссылка продавца</div>
+                            <div class="tariff-plan__descript"><strong>ထ</strong> загружаемых ключей</div>
+                            <div class="tariff-plan__descript"><strong>Гибкое</strong> управление доставкой</div>
+                            <div class="tariff-plan__descript"><strong>Поддержка</strong> 24/7</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="b-button" href="1">Заказать</a>
+
+                        <div class="tariff-plan__sss">Неограниченный и бесконечный доступ к разделу Funpay</div>
+
+                    </div>
+                </div>
+
+                <div class="tariff-plan swiper-slide">
+                    <div>
+                        <div class="tariff-plan__name">Lifetime — версия</div>
+
+                        <div class="tariff-plan-wrapper" data-hosting-tariff-period="1">
+                            <div class="tariff-plan__price">329&nbsp;<span class="char-rouble-native">₽</span></div>
+                            <div class="tariff-plan__upgrade">Максимальная экономия!<br>Единоразовый платеж.
+                            </div>
+                        </div>
+
+
+
+                        <div class="tariff-plan__divider"></div>
+                        <div class="descript__container">
+                            <div class="tariff-plan__descript"><strong>Все</strong> возможности Premium</div>
+                            <div class="tariff-plan__descript"><strong>Доступ</strong> к бета-тестированию</div>
+                            <div class="tariff-plan__descript"><strong>Поддержка</strong> проекта</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="b-button" href="1">Заказать</a>
+
+                        <div class="tariff-plan__sss">Неограниченный и бесконечный доступ к разделу Funpay</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+
+        <h1 id="faq" class="name__title">Остались вопросы?</h1>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Как это работает?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed natus neque, et ad ipsa quo,
+                        distinctio libero illo quibusdam iure exercitationem numquam ex! Aliquam magni aperiam sunt
+                        recusandae suscipit expedita vel reprehenderit voluptate sint nobis cumque perspiciatis nesciunt
+                        similique enim, natus nisi, magnam veniam sed deleniti culpa, vitae molestias placeat?
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Как подключить авто-доставку к товару на Digiseller?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, maiores dolore? Doloribus
+                        totam laudantium commodi voluptatum facere ratione delectus asperiores molestiae quo eum.
+                        Dolores dolor optio accusantium error laudantium et recusandae eveniet ullam, non sit fuga porro
+                        ea ad quisquam excepturi quam inventore illo earum? Quod nemo aut eaque deserunt.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    У меня возникли проблемы, куда обратиться?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, laudantium consequuntur?
+                        Deleniti eligendi delectus minima, pariatur saepe libero nesciunt nihil sequi illum magni
+                        perferendis accusantium distinctio fugiat dignissimos corrupti exercitationem maiores! Nemo
+                        itaque odit tempore eaque eveniet voluptatibus magni quasi illo, error iste maiores ullam ab
+                        fuga sint cumque blanditiis.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Как это работает?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quisquam rem autem, ipsa
+                        corporis obcaecati nostrum blanditiis sunt laborum animi, consequatur, aut similique sint quis
+                        est totam possimus fugiat dignissimos ad nesciunt. Et fugiat nesciunt architecto tenetur laborum
+                        ipsum ea enim pariatur est, voluptatibus culpa omnis placeat blanditiis sit deserunt?
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+                    Почему вы требуете API-ключ?
+                </div>
+                <div class="accordion-item-body">
+                    <div class="accordion-item-body-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nostrum neque pariatur
+                        repudiandae excepturi ducimus tempora animi voluptatibus quia blanditiis, odio sapiente nisi
+                        debitis quae unde quo inventore rem accusamus quis aspernatur consequuntur quam. Voluptatum
+                        exercitationem ipsa asperiores quaerat maxime? Quisquam minima tenetur ipsa amet nemo sit enim
+                        laboriosam repellendus.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    </li>
+    </ul>
+
+
+    <footer>
+        <div class="footer">
+            <ul class="footer-info">
+                <li class="footer-logo">
+                    <img src="./images/ADelivery-black.png" alt="">
+                </li>
+                <li class="footer-copyright-li">
+                    <div class="footer-copyright">
+                        <p class="footer-copyright__text">Все права защищены. 2023-<span>2023</span></p>
+                        <p class="footer-copyright__text">
+                            <a href="" class="ds-link">Пользовательское соглашение</a> и
+                            <a href="" class="ds-link">правила пользования</a>.
+                        </p>
+                    </div>
+
+                </li>
+                <li class="footer-contact">
+                        <div class="sl-nav">
+                            <ul>
+                              <li><b class="sl-flag flag-ru current"></b>
+                                <ul>
+                                  <a href="ua"><li><i class="sl-flag flag-ua"><div id="germany"></div></i> <span></span></li></a>
+                                  <a href="usa"><li><i class="sl-flag flag-usa"><div id="germany"></div></i> <span></span></li></a>
+                                  <li><i class="sl-flag flag-ru"><div ></div></i> <span class="active"></span></li>
+                                </ul>
+                              </li>
+                            </ul>
+                    </div>
+                    <div class="contact-container">
+                        <ul class="contacts">
+                            <li class="contact-item">
+                                E-mail: <a href="mailto:contact@alldelivery.ru"
+                                    class="ds-link">contact@alldelivery.ru</a>
+                            </li>
+
+                            <li class="contact-item">
+                                Telegram: <a href="https://t.me/Sulfureba" class="ds-link">Sulfureba</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+
+
+    </footer>
+
+    <!-- Header -->
+    <script src="./js/header.js"></script>
+
+    <!-- Initialize dynamic text -->
+    <script src="./js/dynamicText.js"></script>
+
+    <!-- Initialize modals -->
+    <script src="./js/modals.js"></script>
+
+    <!-- Init Swiper -->
+    <script src="./js/swiper.js"></script>
+
+    <!-- Smooth scroll -->
+    <script src="./js/smoothScroll.js"></script>
+
+    <!-- FAQ -->
+    <script src="./js/faq.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <script src="https://kit.fontawesome.com/ea9459630b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="">
+        <div class="header__logo ">
+            <a href="#main"><img src="./images/ADelivery_white.png" alt=""></a>
+            <div class="menu-icon">
+                <button>
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="header__top">
+            <div class="user__settings">
+                <div class="dropdown">
+                    <i class="fa-solid fa-chevron-down dropbtn"></i>
+                    <div class="dropdown-content">
+                      <a href="#">Настройки</a>
+                      <a href="#">Выйти</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="user__info">
+                <span class="user__head">
+                    <p>Username</p>
+                </span>
+                <span class="user__role">
+                    <p>Class</p>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="">
+        <div class="main__sidebar">
+            <div class="scrollbar-sidebar">
+                <div class="sidebar__inner">
+                    <ul class="vertical-menu">
+                        <li class="main__sidebar__heading"><i class="fa-solid fa-user fa-sm"
+                                style="margin-right: 10px"></i>Панель управления</li>
+                        <li>
+                            <a href="" class="list active">Статистика</a>
+                            <a href="" class="list">Активные заказы</a>
+                            <a href="" class="list">Управление товарами</a>
+                        </li>
+                    </ul>
+                    <div class="shortened-menu">
+                        <ul>
+                            <li><a href="#" class="active"><i class="fa-solid fa-chart-simple fa-xl" style="color: #3f6ad8;"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="fa-solid fa-business-time fa-xl" style="color: #3f67d8;"></i></a>
+                            </li>
+                            <li><a href="#" class=""><i class="fa-solid fa-inbox fa-xl" style="color: #3f67d8;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <li>
+        </div>
+
+        <div class="main__outer">
+            <div class="main__inner">
+                <div class="main__title">
+                    <div class="main-title-wrapper">
+                        <div class="main-title-heading">
+                            <div class="main-title-icon">
+                                <i class="fa-solid fa-chart-simple fa-sm" style="color: #3f6ad8;"></i>
+                            </div>
+                            <div>Панель управления
+                                <div class="main-title-subheading">Универсальная панель для управления новыми
+                                    заказами с личного кабинета
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bloom">
+                    <div class="card_outer">
+                        <div class="card_inner">
+                            <div class="card_inner_left">
+                                <div class="card_title">Всего заказов</div>
+                                <div class="card_subtitle">Данные за весь период</div>
+                            </div>
+                            <div class="card_inner_right">
+                                <div class="card_numbers"><span>1896</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card green">
+                    <div class="card_outer">
+                        <div class="card_inner">
+                            <div class="card_inner_left">
+                                <div class="card_title">Всего заказов</div>
+                                <div class="card_subtitle">Данные за весь период</div>
+                            </div>
+                            <div class="card_inner_right">
+                                <div class="card_numbers"><span>1896</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card orange">
+                    <div class="card_outer">
+                        <div class="card_inner">
+                            <div class="card_inner_left">
+                                <div class="card_title">Всего заказов</div>
+                                <div class="card_subtitle">Данные за весь период</div>
+                            </div>
+                            <div class="card_inner_right">
+                                <div class="card_numbers"><span>1896</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.menu-icon')
+        hamburger.addEventListener('click', function () {
+            if (document.body.clientWidth > 890) {
+                const header = document.querySelector('header')
+                const main = document.querySelector('main')
+                header.classList.toggle('mobile')
+                main.classList.toggle('short')
+            } else {
+                const sidebar = document.querySelector('.main__sidebar')
+                const main = document.querySelector('main')
+                main.classList.remove('short')
+                sidebar.classList.toggle('visible')
+            }
+        })
+
+        const dropdown = document.querySelector('.dropdown')
+        dropdown.addEventListener('click', function () {
+            dropdown.classList.toggle('active')
+        })
+    </script>
+</body>
+
+</html>
