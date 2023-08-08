@@ -213,6 +213,14 @@
                 console.log(e)
                 
             }
+            document.addEventListener('click', function(e) {
+                const menu = document.querySelector('.filter__content')
+                if(menu && menu.contains(e.target)) {
+                    return
+                } else if(menu) {
+                    document.querySelector('.filter__dropdown').removeChild(menu)
+                }
+            })
             const filterBar = document.querySelector('.filter__bar')
             filterBar.addEventListener('propertychange', showFilters)
             filterBar.addEventListener('input', showFilters)
