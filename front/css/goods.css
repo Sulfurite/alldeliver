@@ -580,7 +580,7 @@ main {
 }
 
 .filter__wrapper input {
-    width: 300px;
+    width:100%;
     height: 30px;
     border-radius: 0.25rem;
     background: rgba(0,0,0,.05);
@@ -598,6 +598,7 @@ main {
     position:absolute;
     top: 500px;
 } */
+
 
 .order__search {
     display: flex;
@@ -796,6 +797,11 @@ main {
 }
 
 @media screen and (max-width: 1500px) {
+    .main__sidebar.visible {
+        height: 1000vh!important;
+        min-height: 100%!important;
+        max-height: 1501px;
+    }
     .goods__container {
         display:flex;
         flex-direction: column;
