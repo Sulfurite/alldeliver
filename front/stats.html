@@ -133,6 +133,7 @@
         const hamburger = document.querySelector('.menu-icon')
         hamburger.addEventListener('click', function () {
             if (document.body.clientWidth > 890) {
+                const storage = window.localStorage
                 const header = document.querySelector('header')
                 const main = document.querySelector('main')
                 header.classList.toggle('mobile')
