@@ -90,69 +90,71 @@
                         <button class="search__icon"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-ms"></i></button>
                 </div>
             </div>
-                <div class="order__header">
-                    <h1 class="order__title"> Активные заказы </h1>
-                </div>
-                <div class="order__table">
-                        <table>
-                            <thead class="table__header">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Order</th>
-                                    <th>Order1</th>
-                                    <th>Order2</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table__body">
-                                <tr class="table__row">
-                                    <td class="muted">#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td><button onclick="details(this)">Details</button></td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="muted">#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td><button onclick="details(this)">Details</button></td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="muted">#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td><button onclick="details(this)">Details</button></td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="muted">#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td><button onclick="details(this)">Details</button></td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="muted">#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td><button onclick="details(this)">Details</button></td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="muted">#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td>#345</td>
-                                    <td><button onclick="details(this)">Details</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                </div>
-                <div class="order__bottom">
-                    <button><i class="fa-solid fa-chevron-left fa-sm muted"></i></button>
-                    <button><i class="fa-solid fa-chevron-right fa-sm muted"></i></button>
+                <div class="orders__container">
+                    <div class="order__header">
+                        <h1 class="order__title"> Активные заказы </h1>
+                    </div>
+                    <div class="order__table">
+                            <table>
+                                <thead class="table__header">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Order</th>
+                                        <th>Order1</th>
+                                        <th>Order2</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table__body">
+                                    <tr class="table__row">
+                                        <td class="muted">#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td><button onclick="details(this)">Details</button></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="muted">#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td><button onclick="details(this)">Details</button></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="muted">#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td><button onclick="details(this)">Details</button></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="muted">#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td><button onclick="details(this)">Details</button></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="muted">#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td><button onclick="details(this)">Details</button></td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="muted">#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td>#345</td>
+                                        <td><button onclick="details(this)">Details</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                    <div class="order__bottom">
+                        <button><i class="fa-solid fa-chevron-left fa-sm muted"></i></button>
+                        <button><i class="fa-solid fa-chevron-right fa-sm muted"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,9 +217,12 @@
             }
             document.addEventListener('click', function(e) {
                 const menu = document.querySelector('.filter__content')
-                if(menu && menu.contains(e.target)) {
-                    return
-                } else if(menu) {
+                const dropdown = document.querySelector('.dropdown.active')
+
+                if(dropdown && !dropdown.contains(e.target)) {
+                    document.querySelector('.dropdown').classList.toggle('active')
+                }
+                if(menu && !menu.contains(e.target)) {
                     document.querySelector('.filter__dropdown').removeChild(menu)
                 }
             })

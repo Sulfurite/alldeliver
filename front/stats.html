@@ -149,6 +149,28 @@
         dropdown.addEventListener('click', function () {
             dropdown.classList.toggle('active')
         })
+        document.addEventListener('click', function(e) {
+                const menu = document.querySelector('.filter__content')
+                const dropdown = document.querySelector('.dropdown.active')
+
+                if(dropdown && !dropdown.contains(e.target)) {
+                    document.querySelector('.dropdown').classList.toggle('active')
+                }
+                if(menu && !menu.contains(e.target)) {
+                    document.querySelector('.filter__dropdown').removeChild(menu)
+                }
+            })
+        function initBar() {
+                const check = window.localStorage.getItem('short')
+                if(check == 'true') {
+                    console.log(11)
+                    const header = document.querySelector('header')
+                    const main = document.querySelector('main')
+                    header.classList.toggle('mobile')
+                    main.classList.toggle('short')
+                }
+            }
+            window.addEventListener('load', initBar());
     </script>
 </body>
 
