@@ -166,6 +166,13 @@
                     const main = document.querySelector('main')
                     header.classList.toggle('mobile')
                     main.classList.toggle('short')
+                    if(!storage.getItem('short') && header.classList.contains('mobile')) {
+                        storage.setItem('short', true)
+                    } else if(storage.getItem('short') && !header.classList.contains('mobile')) {
+                        storage.setItem('short', false)
+                    } else {
+                        storage.setItem('short', true)
+                    }
                 } else {
                     const sidebar = document.querySelector('.main__sidebar')
                     const main = document.querySelector('main')
@@ -229,6 +236,18 @@
             const filterBar = document.querySelector('.filter__bar')
             filterBar.addEventListener('propertychange', showFilters)
             filterBar.addEventListener('input', showFilters)
+
+            function initBar() {
+                const check = window.localStorage.getItem('short')
+                if(check == 'true') {
+                    console.log(11)
+                    const header = document.querySelector('header')
+                    const main = document.querySelector('main')
+                    header.classList.toggle('mobile')
+                    main.classList.toggle('short')
+                }
+            }
+            window.addEventListener('load', initBar());
         </script>
 </body>
 

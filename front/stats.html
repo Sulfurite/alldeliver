@@ -137,6 +137,13 @@
                 const main = document.querySelector('main')
                 header.classList.toggle('mobile')
                 main.classList.toggle('short')
+                if(!storage.getItem('short') && header.classList.contains('mobile')) {
+                        storage.setItem('short', true)
+                    } else if(storage.getItem('short') && !header.classList.contains('mobile')) {
+                        storage.setItem('short', false)
+                    } else {
+                        storage.setItem('short', true)
+                    }
             } else {
                 const sidebar = document.querySelector('.main__sidebar')
                 const main = document.querySelector('main')
@@ -170,7 +177,7 @@
                     main.classList.toggle('short')
                 }
             }
-            window.addEventListener('load', initBar());
+        window.addEventListener('load', initBar());
     </script>
 </body>
 
